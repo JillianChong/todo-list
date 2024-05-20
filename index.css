@@ -1,0 +1,43 @@
+.container {
+    /* 
+    
+    Flex layout on outer container div specifying to center elements inside in a 
+        column. 
+    Added height and width to circle to make it appear square, then curve the 
+        border to make it a circle
+
+    */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* html {
+    background-color: #00539f;
+} */
+
+.circle {
+    border: 1px solid #000000;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.userinput {
+    border: 1px solid #000000;
+    width: 200px;
+    height: 200px;
+    padding: 0 20px 20px 20px;
+    border: 1px solid blue;
+
+}
+
+.action {
+    margin: 10px;
+}
+
+button {
+    cursor: pointer;
+}

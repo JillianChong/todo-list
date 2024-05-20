@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>ToDoList</h1>
+        <p class="subheading">
+            Let's make a to-do list interface.
+        </p>
+
+        <div class="circle" id="circleID"></div>
+        <div class="action">
+            <button onclick="paint('red')">Red</button>
+            <button onclick="paint('green')">Green</button>
+            <button onclick="paint('yellow')">Yellow</button>
+            <button onclick="paintRandom()">Random</button>
+        </div>
+
+        <div class="userinput" id="UserInputID" class="action">
+            <form>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value="John"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" value="Doe"><br>
+                <button type="button" onclick="printInput()">Submit</button>
+              </form>
+        </div>
+
+        <p class="ouput" id="outputid"></p>
+    </div>
+</body>
+</html>
