@@ -18,20 +18,22 @@
     background-color: #00539f;
 } */
 
-.circle {
-    border: 1px solid #000000;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-}
-
 .userinput {
     border: 1px solid #000000;
-    width: 200px;
-    height: 200px;
     padding: 0 20px 20px 20px;
     border: 1px solid blue;
 
+}
+
+.tasktable {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 200px;
+}
+
+tr, td {
+    border: 1px solid black;
+    border-collapse: collapse;
 }
 
 .action {
