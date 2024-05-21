@@ -19,7 +19,7 @@
         <div class="userinput" id="UserInputID">
             <form>
                 <label for="tbane">Task name:</label><br>
-                <input type="text" id="tname" name="tname"><br>
+                <input type="text" id="tname" name="tname" ><br>
                 <button type="button" onclick="addTask()">Submit</button>
               </form>
         </div>
@@ -31,6 +31,10 @@
                 <th>Task</th>
             </tr>
         </table>
+
+        <div>
+            <button type="button" id="DeleteButtonID" onclick="deleteTasks()">Delete</button>
+        </div>
     </div>
 </body>
 </html>
