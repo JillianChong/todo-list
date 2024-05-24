@@ -36,6 +36,19 @@ tr, td {
     border-collapse: collapse;
     text-align: left;
     text-wrap: wrap;
+    width: 300px;
+}
+
+#GreenPriority {
+    background-color: green;
+}
+
+#YellowPriority {
+    background-color: yellow;
+}
+
+#RedPriority {
+    background-color: red;
 }
 
 .action {
