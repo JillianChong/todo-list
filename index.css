@@ -14,21 +14,74 @@
     align-items: center;
 }
 
-/* html {
-    background-color: #00539f;
-} */
+html {
+    background-color: #F3F3F3;
+} 
+
 
 .userinput {
-    border: 1px solid #000000;
+    /* border: 3px solid black;
+    background-color: #41CDF9;
     padding: 0 20px 20px 20px;
-    border: 1px solid blue;
+    font-size: 1em;
+    font-family: "Gill Sans";*/
+    font-size: 1.5em;
+    font-variant: small-caps;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
 
+    background-color:white;
+    padding: 5% 5% 5% 5%;
+    border-radius: 20px;
+}
+
+.form-name, .form-date, .form-priority, .informationdiv{
+    display: flex;
+    align-items: center;
+    margin-bottom: 3%; /* Adjust spacing between groups */
+}
+
+#tnameLabel, #dateLabel, #priorityLabel, #informationLabel {
+    width: 300px; /* Adjust label width as needed */
+    margin-right: 20px; /* Adjust spacing between label and input */
+}
+
+#tname, #date, #information {
+    flex: 1;
+    background-color: #F2F1F1;
+    height: 2.5em;
+    border-radius: 20px;
+    text-align: center;
+    border: 0px;
+}
+
+.prioritydiv {
+    background-color: #F2F1F1;
+    padding: 10px 10px 10px 10px;
+    border-radius: 120px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+
+}
+
+#GreenPriority {
+    transform: scale(1.5);
+    margin-right: 10px;
+    margin-left: 10%
+}
+
+#YellowPriority, #RedPriority {
+    transform: scale(1.5);
+    margin-left: 20%;
+    margin-right: 10px;
 }
 
 .tasktable {
     border: 1px solid black;
     border-collapse: collapse;
-    width: 200px;
+    width: 80%;
 }
 
 tr, td {
@@ -39,22 +92,11 @@ tr, td {
     width: 300px;
 }
 
-#GreenPriority {
-    background-color: green;
-}
-
-#YellowPriority {
-    background-color: yellow;
-}
-
-#RedPriority {
-    background-color: red;
-}
-
 .action {
     margin: 10px;
 }
 
 button {
     cursor: pointer;
+
 }

@@ -18,18 +18,30 @@
 
         <div class="userinput" id="UserInputID">
             <form>
-                <label for="tname">Task name:</label><br>
-                <input type="text" id="tname" name="tname"><br>
-                <label for="date">Due Date:</label><br>
-                <input type="date" id="date" name="date" min="Date().toDateString()"><br>
-                <label for="priority">Priority Level:</label><br>
-                <div class="prioritydiv">
-                    <input type="checkbox" id="GreenPriority">Green</button>
-                    <input type="checkbox" id="YellowPriority">Yellow</button>
-                    <input type="checkbox" id="RedPriority">Red</button>
-                </div><br>
+                <div class="form-name">
+                    <label for="tname" id="tnameLabel">Task name:</label><br>
+                    <input type="text" id="tname" name="tname"><br>
+                </div>
+
+                <div class="form-date">
+                    <label for="date" id="dateLabel">Due Date:</label><br>
+                    <input type="date" id="date" name="date" min="Date().toDateString()"><br>
+                </div>
+
+                <div class="form-priority">
+                    <label for="priority" id="priorityLabel">Priority Level:</label><br>
+                    <div class="prioritydiv">                        
+                        <input type="checkbox" id="GreenPriority">                        
+                        <label for="GreenPriority">Green</label>
+                        <input type="checkbox" id="YellowPriority">
+                        <label for="YellowPriority">Yellow</label>
+                        <input type="checkbox" id="RedPriority">
+                        <label for="RedPriority">Red</label>
+                    </div><br>
+                </div>
+
                 <div class="informationdiv" id="informationDivID">
-                    <label for="information">Task Information:</label><br>
+                    <label for="information" id="informationLabel">Task Information:</label><br>
                     <input type="text" id="information" name="information"><br>
                 </div>
                 <button type="button" onclick="addTask()">Submit</button>
