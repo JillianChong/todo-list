@@ -6,8 +6,11 @@ function printInput() {
     // paragraph.appendChild(text);
 
     const outputDiv = document.getElementById("outputid");
-    outputDiv.textContent = 'Tasks left:\n' + taskName;
+    outputDiv.textContent = 'Tasks left:\n' + taskCount;
 }
+
+var taskCount = 0;
+var completedCount = 0;
 
 function addTask() {    
     const taskName = document.getElementById('tname').value;
@@ -21,8 +24,10 @@ function addTask() {
     var table = document.getElementById('TaskTableID');
     var numRows = table.getElementsByTagName('tr').length;
 
+    taskCount++;
+
     const outputDiv = document.getElementById("outputid");
-    outputDiv.textContent = 'Tasks left:\n' + numRows;
+    outputDiv.textContent = 'Tasks left:\n' + taskCount;
 
     var row = table.insertRow(numRows);
     var cell0 = row.insertCell(0);
@@ -112,6 +117,20 @@ function toggleStrikeThrough(row) {
         //numRows--;
     }
 
+    if(striked) {
+        taskCount++;
+        completedCount--;
+    } else {
+        taskCount--;
+        completedCount++;
+    }
+
+    const outputDiv = document.getElementById("outputid");
+    outputDiv.textContent = 'Tasks left:\n' + taskCount;
+
+    const completedDiv = document.getElementById("completedId");
+    completedDiv.textContent = 'Tasks completed:\n' + completedCount;
+
     for(var i = 0; i < row.cells.length; i++) {
         var cell = row.cells[i];
 
@@ -145,7 +164,4 @@ function deleteTasks() {
         var index = indexesToRemove[i];
         rows[index].remove();
     }
-
-    const outputDiv = document.getElementById("outputid");
-    outputDiv.textContent = 'Tasks left:\n' + (rows.length - 1);
 }

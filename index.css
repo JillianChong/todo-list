@@ -1,42 +1,34 @@
-.container {
-    /* 
-    
-    Flex layout on outer container div specifying to center elements inside in a 
-        column. 
-    Added height and width to circle to make it appear square, then curve the 
-        border to make it a circle
-
-    */
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+html {
+    background-color: #5D9CE2;
 }
 
-html {
-    background-color: #F3F3F3;
-} 
+.titlecontainer {
+    text-align: center;
+    color: white;
+}
 
+.titlecontainer h1 {
+    font-size: 100px;
+    margin-bottom: 15px;
+}
+
+.titlecontainer p {
+    font-size: 2em;
+}
+
+p {
+    text-align: center;
+}
 
 .userinput {
-    /* border: 3px solid black;
-    background-color: #41CDF9;
-    padding: 0 20px 20px 20px;
-    font-size: 1em;
-    font-family: "Gill Sans";*/
-    font-size: 1.5em;
-    font-variant: small-caps;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-
-    background-color:white;
-    padding: 5% 5% 5% 5%;
-    border-radius: 20px;
+    background-color: #F3F3F3;
+    width: 50%;
+    margin: auto;
+    border-radius: 6px;
+    padding: 20px 50px;
 }
 
-.form-name, .form-date, .form-priority, .informationdiv{
+.form-name, .form-date, .form-priority, .informationdiv {
     display: flex;
     align-items: center;
     margin-bottom: 3%; /* Adjust spacing between groups */
@@ -44,59 +36,72 @@ html {
 
 #tnameLabel, #dateLabel, #priorityLabel, #informationLabel {
     width: 300px; /* Adjust label width as needed */
-    margin-right: 20px; /* Adjust spacing between label and input */
 }
 
 #tname, #date, #information {
-    flex: 1;
-    background-color: #F2F1F1;
+    background-color: white;
     height: 2.5em;
-    border-radius: 20px;
+    border-radius: 10px;
     text-align: center;
     border: 0px;
+    width: 60%;
+}
+
+#information {
+    height: 5em;
+    overflow-y: scroll;
 }
 
 .prioritydiv {
-    background-color: #F2F1F1;
-    padding: 10px 10px 10px 10px;
-    border-radius: 120px;
-    width: 100%;
-    align-items: center;
+    display: grid;
+}
+
+.prioritydiv label {
+    grid-column: 2;
+    margin-left: 10px;
+}
+
+.buttondiv {
     display: flex;
-
+    align-items: center;
+    justify-content: center;
 }
 
-#GreenPriority {
-    transform: scale(1.5);
-    margin-right: 10px;
-    margin-left: 10%
+.submit-btn, .delete-btn {
+    background: white;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 38px;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
 }
 
-#YellowPriority, #RedPriority {
-    transform: scale(1.5);
-    margin-left: 20%;
-    margin-right: 10px;
+.submit-btn:hover, .delete-btn:hover {
+    background: #C06B3E;
 }
 
 .tasktable {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-collapse: collapse;
-    width: 80%;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    background-color: #F3F3F3;
+    font-size: 20px;
+    border-radius: 6px;
+}
+
+th {
+    padding: 10px;
 }
 
 tr, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    text-align: left;
-    text-wrap: wrap;
-    width: 300px;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
 }
 
-.action {
-    margin: 10px;
-}
-
-button {
-    cursor: pointer;
-
+tr:hover {
+    background: #C06B3E;
 }

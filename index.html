@@ -10,57 +10,65 @@
 </head>
 <!-- TODO: fix min datetime-->
 <body>
-    <div class="container">
+    <div class="titlecontainer">
         <h1>ToDoList</h1>
         <p class="subheading">
-            To-do list interface.
+            A to-do list interface.
         </p>
-
-        <div class="userinput" id="UserInputID">
-            <form>
-                <div class="form-name">
-                    <label for="tname" id="tnameLabel">Task name:</label><br>
-                    <input type="text" id="tname" name="tname"><br>
-                </div>
-
-                <div class="form-date">
-                    <label for="date" id="dateLabel">Due Date:</label><br>
-                    <input type="date" id="date" name="date" min="Date().toDateString()"><br>
-                </div>
-
-                <div class="form-priority">
-                    <label for="priority" id="priorityLabel">Priority Level:</label><br>
-                    <div class="prioritydiv">                        
-                        <input type="checkbox" id="GreenPriority">                        
-                        <label for="GreenPriority">Green</label>
-                        <input type="checkbox" id="YellowPriority">
-                        <label for="YellowPriority">Yellow</label>
-                        <input type="checkbox" id="RedPriority">
-                        <label for="RedPriority">Red</label>
-                    </div><br>
-                </div>
-
-                <div class="informationdiv" id="informationDivID">
-                    <label for="information" id="informationLabel">Task Information:</label><br>
-                    <input type="text" id="information" name="information"><br>
-                </div>
-                <button type="button" onclick="addTask()">Submit</button>
-            </form>
-        </div>
-
-        <p class="ouput" id="outputid"></p>
-
-        <table class="tasktable" id="TaskTableID">
-            <tr>
-                <th>Task Name</th>
-                <th>Due Date</th>
-                <th>Priority Level</th>
-            </tr>
-        </table>
-
-        <div>
-            <button type="button" id="DeleteButtonID" onclick="deleteTasks()">Delete</button>
-        </div>
     </div>
+
+    <div class="userinput" id="UserInputID">
+        <form>
+            <div class="form-name">
+                <label for="tname" id="tnameLabel">Task name:</label><br>
+                <input type="text" id="tname" name="tname"><br>
+            </div>
+
+            <div class="form-date">
+                <label for="date" id="dateLabel">Due Date:</label><br>
+                <input type="date" id="date" name="date" min="Date().toDateString()"><br>
+            </div>
+
+            <div class="form-priority">
+                <label for="priority" id="priorityLabel">Priority Level:</label><br>
+                <div class="prioritydiv">                        
+                    <input type="checkbox" id="GreenPriority">                        
+                    <label for="GreenPriority">Green</label>
+                    <input type="checkbox" id="YellowPriority">
+                    <label for="YellowPriority">Yellow</label>
+                    <input type="checkbox" id="RedPriority">
+                    <label for="RedPriority">Red</label>
+                </div><br>
+            </div>
+
+            <div class="informationdiv" id="informationDivID">
+                <label for="information" id="informationLabel">Task Information:</label><br>
+                <input type="text" id="information" name="information"><br>
+            </div>
+
+            <div class="buttondiv">
+                <button class="submit-btn" type="button" onclick="addTask()">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="taskCounts">
+        <p class="ouput" id="outputid">Tasks left: 0</p>
+        <p class="ouput" id="completedId">Tasks completed: 0</p>
+    </div>
+
+
+    <table class="tasktable" id="TaskTableID">
+        <tr>
+            <th>Task Name</th>
+            <th>Due Date</th>
+            <th>Priority Level</th>
+        </tr>
+    </table>
+
+    <div class="buttondiv">
+        <button class="delete-btn" type="button" id="DeleteButtonID" onclick="deleteTasks()">Delete</button>
+    </div>
+    <!-- </div> -->
 </body>
 </html>
