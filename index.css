@@ -82,6 +82,11 @@ p {
     background: #C06B3E;
 }
 
+.taskCounts {
+    color: white;
+    font-size: 1.5em;
+}
+
 .tasktable {
     /* border: 1px solid black; */
     border-collapse: collapse;
